@@ -7,7 +7,7 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	background-color: #222;
+	background-color: #1d201d;
 	color: white;
 	font-family: 'Roboto', sans-serif;
 }
@@ -43,4 +43,55 @@ nav ul li:hover, nav ul li.active {
 	border-radius: 15px;
 	width: 100px;
 	cursor: pointer;
+}
+
+#top {
+	display: flex;
+	height: 70vh;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	width: 800px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #00000055;
+	background-color: #333;
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+}
+
+.landing--heading--container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	flex-grow: 1;
+	align-self: center;
+	height: 100%
+}
+
+.landing--heading--name {
+	font-weight: bold;
+	font-size: 5rem;
+	margin-bottom: -10px;
+}
+
+.landing--heading--title {
+	font-weight: 200;
+	font-size: 2rem;
+}
+
+.landing--heading--subtitle {
+	margin-top: 10px;
+	font-weight: 100;
+}
+
+.landing--picture--container {
+	overflow: hidden;
+	background-image: url('images/headshot.jpg');
+	background-position: center;
+	background-size: contain;
+	height: 200px;
+	width: 200px;
 }

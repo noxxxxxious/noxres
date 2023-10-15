@@ -1,4 +1,5 @@
 use sycamore::prelude::*;
+mod components;
 
 fn main() {
     sycamore::render(|| view! {
@@ -10,6 +11,9 @@ fn main() {
                 li { "Profiles" }
             }
         }
-        main { "Hello" }
+        components::SectionTop::SectionTop {}
+        components::SectionPortfolio::SectionPortfolio {}
+        components::SectionAbout::SectionAbout {}
+        components::SectionProfiles::SectionProfiles {}
     });
 }
