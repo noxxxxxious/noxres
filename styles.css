@@ -17,6 +17,7 @@ nav {
 	top: 20px;
 	left: 50%;
 	transform: translateX(-50%);
+	z-index: 10;
 }
 
 nav ul {
@@ -105,7 +106,7 @@ nav ul li:hover, nav ul li.active {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	border: 3px solid #558755;
+	border: 5px solid #558755;
 	padding: 5px;
 	border-radius: 10px;
 	text-align: center;
@@ -115,4 +116,9 @@ nav ul li:hover, nav ul li.active {
 	color: #558755;
 	transform: translate(40%, 40%) rotate(-25deg);
 	text-shadow: 5px 5px 5px #00000055;
+}
+
+#portfolio {
+	background-color: #3d403d;
+	height: 50vh;
 }
