@@ -30,9 +30,48 @@ pub fn SectionPortfolio<G: Html>() -> View<G> {
                 "Express".to_string(),
                 "HTMLCanvas".to_string()
             ],
-            description: "The first project I consulted a lot with ChatGPT on. It consists of two sides: Creator and Reader. Reader is the user-facing project that allows users to read manga using images that are drawn over with crisp text instead of having to rely on shoddy scans. In addition, clicking on a word will show the reading, part of speech, and definitions to help hide ignoring kanji and reading furigana, and also to cut out the need for leaving the page to look up a word. Creator, on the other hand, is a tool designed to make easier the process of creating the JSON's needed to display text bubbles on the pages. Instead of writing JSON by hand, one can draw lines and write text in a much more typical way.".to_string(),
+            description: "This project consists of two parts: Creator and Reader. Reader is the user-facing project that allows users to read manga using images that are drawn over with crisp text instead of having to rely on shoddy scans. In addition, clicking on a word will show the reading, part of speech, and definitions to help hide ignoring kanji and reading furigana, and also to cut out the need for leaving the page to look up a word. Creator, on the other hand, is a tool designed to make easier the process of creating the JSON's needed to display text bubbles on the pages. Instead of writing JSON by hand, one can draw lines and write text in a much more typical way.".to_string(),
             github_href: Some("".to_string()),
-            preview_href: None
+            preview_href: Some("".to_string()),
+        },
+        PortfolioItem::PortfolioItemProps {
+            title: "Jungle Camp".to_string(),
+            subtitle: "Item information for the MOBA Predecessor.".to_string(),
+            img_href: "images/headshot.jpg".to_string(),
+            img_alt: "Screenshot of the Jungle Camp website".to_string(),
+            technologies: vec![
+                "Vue 2".to_string(), 
+                "Vuex".to_string(), 
+            ],
+            description: "During the alpha and beta, there were no resources to be able to look at the game items outside of the game, in particular in-between alpha tests. I created Jungle Camp as a way for people to access the item information and theorycraft while being unable to play. Eventually, I joined a team of people and worked on a different (also now defunct) project, and Jungle Camp was gobbled up by it. Thus, the data is out of date as I put it back online solely for my portfolio.".to_string(),
+            github_href: Some("".to_string()),
+            preview_href: Some("".to_string()),
+        },
+        PortfolioItem::PortfolioItemProps {
+            title: "Rust Portfolio Website".to_string(),
+            subtitle: "Did I mention it was written in Rust?".to_string(),
+            img_href: "images/headshot.jpg".to_string(),
+            img_alt: "Screenshot of this website".to_string(),
+            technologies: vec![
+                "Rust".to_string(), 
+                "Sycamore".to_string(), 
+            ],
+            description: "I've remade my portfolio website a few different times with pure HTML, CSS, and vanilla JavaScript. I remade it using Vue, and was working on remaking it again using NextJS; however, I felt like I wanted to do something different this time around and use something I was wholly unfamiliar with. After learning a bit of Rust and finding Sycamore, I decided to give it a shot!".to_string(),
+            github_href: Some("".to_string()),
+            preview_href: Some("".to_string()),
+        },
+        PortfolioItem::PortfolioItemProps {
+            title: "Hudu Keyboard Navigation".to_string(),
+            subtitle: "Hu needs a mouse anyway?".to_string(),
+            img_href: "images/headshot.jpg".to_string(),
+            img_alt: "Screenshot of this website".to_string(),
+            technologies: vec![
+                "Rust".to_string(), 
+                "Sycamore".to_string(), 
+            ],
+            description: "I had put in a feature request to the Hudu Documentation team to support keyboard navigation a la IT Glue. The request never gained traction, so I took things into my own hands. I have actually become so accustomed to this that when I don't have it installed on one of the computers I'm using, I'll stop what I'm doing to install Tampermonkey and this userscript. It has become a necessity to myself and a couple others at my place of work.".to_string(),
+            github_href: Some("".to_string()),
+            preview_href: Some("".to_string()),
         }
     ];
 

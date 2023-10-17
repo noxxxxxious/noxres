@@ -120,5 +120,39 @@ nav ul li:hover, nav ul li.active {
 
 #portfolio {
 	background-color: #3d403d;
-	height: 50vh;
+}
+
+.portfolio--container {
+	width: 1024px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.portfolio-item--container {
+	overflow: hidden;
+	border-radius: 15px;
+	background-color: #222;
+	box-shadow: 5px 5px 5px #00000055;
+	display: flex;
+}
+
+.portfolio-item--info-wrapper {
+	padding: 20px;
+}
+
+.portfolio-item--info--title-wrapper {
+	margin-bottom: 20px;
+}
+
+.portfolio-item--info--title {
+	font-weight: bold;
+	font-size: 3rem;
+}
+
+.portfolio-item--info--subtitle {
+	font-weight: 100;
+	font-size: 1.5rem;
+	font-style: italic;
 }

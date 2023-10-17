@@ -8,7 +8,9 @@ pub struct PortfolioItemProps {
     pub img_alt: String,
     pub technologies: Vec<String>,
     pub description: String,
+    #[prop(!optional)]
     pub github_href: Option<String>,
+    #[prop(!optional)]
     pub preview_href: Option<String>
 }
 
@@ -20,12 +22,12 @@ pub fn PortfolioItem<G: Html>(props: PortfolioItemProps) -> View<G> {
 
     let preview_link = match props.preview_href {
         Some(link) => view! { a(href=link) { "View Project" } },
-        None => view! { span(class="empty"){} }
+        None => view! {}
     };
 
     let github_link = match props.github_href {
         Some(link) => view! { a(href=link) { "View Source" } },
-        None => view! { span(class="empty"){} }
+        None => view! {}
     };
 
     view! {
