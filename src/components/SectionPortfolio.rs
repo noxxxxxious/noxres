@@ -8,13 +8,13 @@ pub fn SectionPortfolio<G: Html>() -> View<G> {
         PortfolioItem::PortfolioItemProps {
             title: "Simple IP (sip)".to_string(),
             subtitle: "Get your local IP with less garble.".to_string(),
-            img_href: "images/headshot.jpg".to_string(),
+            img_href: "images/sip.jpg".to_string(),
             img_alt: "Screenshot of the sip command line utility.".to_string(),
             technologies: vec![
                 "Rust".to_string(), 
                 "Interfaces.rs".to_string()
             ],
-            description: "A simple Rust command line utility that gives your local interface IP's and subnets without having to look through the mess that ip or ifconfig splat on your screen.".to_string(),
+            description: "A simple command line utility that gives your local interface IP's and subnets without having to look through the mess that ip or ifconfig splat on your screen.".to_string(),
             github_href: Some("".to_string()),
             preview_href: None
         },

@@ -136,10 +136,22 @@ nav ul li:hover, nav ul li.active {
 	background-color: #222;
 	box-shadow: 5px 5px 5px #00000055;
 	display: flex;
+	border: 10px solid #222;
+}
+
+.portfolio-item--image {
+	width: 335px;
+	height: 335px;
+	flex-shrink: 0;
+	background-size: cover;
+	border-radius: 15px;
 }
 
 .portfolio-item--info-wrapper {
 	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .portfolio-item--info--title-wrapper {
@@ -155,4 +167,29 @@ nav ul li:hover, nav ul li.active {
 	font-weight: 100;
 	font-size: 1.5rem;
 	font-style: italic;
+}
+
+.portfolio-item--info--description {
+	text-indent: 5rem;
+}
+
+.portfolio-item--info--technologies {
+	display: flex;
+	justify-content: flex-end;
+	gap: 15px;
+	margin-bottom: 10px;
+}
+
+.portfolio-item--info--technologies--pill {
+	display: inline-block;
+	background-color: #558755;
+	color: black;
+	font-weight: bold;
+	padding: 5px 10px;
+	border-radius: 15px;
+	user-select: none;
+}
+
+.portfolio-item--info--links-wrapper {
+	text-align: right;
 }
