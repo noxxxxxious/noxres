@@ -14,10 +14,16 @@ html, body {
 
 nav {
 	position: fixed;
+	background-image: linear-gradient(to right, #00000000, #000000dd, #000000dd, #00000000);
 	top: 20px;
 	left: 50%;
+	width: 300px;
+	height: 40px;
 	transform: translateX(-50%);
 	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 nav ul {
@@ -30,7 +36,8 @@ nav ul li {
 	all: unset;
 	display: inline-block;
 	width: 20px;
-	background-color: white;
+	background-color: #558755;
+	font-weight: bold;
 	color: transparent;
 	border-radius: 50%;
 	padding: 3px;
@@ -40,7 +47,7 @@ nav ul li {
 }
 
 nav ul li:hover, nav ul li.active {
-	color: black;
+	color: white;
 	border-radius: 15px;
 	width: 100px;
 	cursor: pointer;
@@ -191,5 +198,15 @@ nav ul li:hover, nav ul li.active {
 }
 
 .portfolio-item--info--links-wrapper {
-	text-align: right;
+	display: flex;
+	justify-content: flex-end;
+	gap: 20px;
+}
+ .portfolio-item--info--links-wrapper a {
+	unset: all;
+	font-weight: bold;
+	letter-spacing: 3px;
+	color: #88ba88;
+	text-transform: uppercase;
+	text-decoration: none;
 }

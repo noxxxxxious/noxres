@@ -6,19 +6,6 @@ pub fn SectionPortfolio<G: Html>() -> View<G> {
 
     let pitems = vec![
         PortfolioItem::PortfolioItemProps {
-            title: "Simple IP (sip)".to_string(),
-            subtitle: "Get your local IP with less garble.".to_string(),
-            img_href: "images/sip.jpg".to_string(),
-            img_alt: "Screenshot of the sip command line utility.".to_string(),
-            technologies: vec![
-                "Rust".to_string(), 
-                "Interfaces.rs".to_string()
-            ],
-            description: "A simple command line utility that gives your local interface IP's and subnets without having to look through the mess that ip or ifconfig splat on your screen.".to_string(),
-            github_href: Some("".to_string()),
-            preview_href: None
-        },
-        PortfolioItem::PortfolioItemProps {
             title: "Yomikku".to_string(),
             subtitle: "A manga reader for Japanese learners.".to_string(),
             img_href: "images/headshot.jpg".to_string(),
@@ -30,7 +17,7 @@ pub fn SectionPortfolio<G: Html>() -> View<G> {
                 "Express".to_string(),
                 "HTMLCanvas".to_string()
             ],
-            description: "This project consists of two parts: Creator and Reader. Reader is the user-facing project that allows users to read manga using images that are drawn over with crisp text instead of having to rely on shoddy scans. In addition, clicking on a word will show the reading, part of speech, and definitions to help hide ignoring kanji and reading furigana, and also to cut out the need for leaving the page to look up a word. Creator, on the other hand, is a tool designed to make easier the process of creating the JSON's needed to display text bubbles on the pages. Instead of writing JSON by hand, one can draw lines and write text in a much more typical way.".to_string(),
+            description: "A WIP, my current project consists of two parts: Creator and Reader. Reader is the user-facing project that allows reading manga using drawn over images with crisp text instead of shoddy scans, as well as seeing word definitions, etc. Creator is a tool to make easier the process of creating the JSON's required for Reader. Instead of writing JSON by hand, one can draw lines and write text in a much more typical way.".to_string(),
             github_href: Some("".to_string()),
             preview_href: Some("".to_string()),
         },
@@ -43,7 +30,7 @@ pub fn SectionPortfolio<G: Html>() -> View<G> {
                 "Vue 2".to_string(), 
                 "Vuex".to_string(), 
             ],
-            description: "During the alpha and beta, there were no resources to be able to look at the game items outside of the game, in particular in-between alpha tests. I created Jungle Camp as a way for people to access the item information and theorycraft while being unable to play. Eventually, I joined a team of people and worked on a different (also now defunct) project, and Jungle Camp was gobbled up by it. Thus, the data is out of date as I put it back online solely for my portfolio.".to_string(),
+            description: "During the alpha and beta, there were no resources to be able to look at the game items outside of the game, in particular in-between alpha tests. I created Jungle Camp as a way for people to access the item information and theorycraft while being unable to play. Eventually, I joined a team of people and worked on a different (also now defunct) project, and Jungle Camp was gobbled up by it. Thus, the data is out of date and put it back online solely for portfolio purposes.".to_string(),
             github_href: Some("".to_string()),
             preview_href: Some("".to_string()),
         },
@@ -61,13 +48,26 @@ pub fn SectionPortfolio<G: Html>() -> View<G> {
             preview_href: Some("".to_string()),
         },
         PortfolioItem::PortfolioItemProps {
+            title: "Simple IP (sip)".to_string(),
+            subtitle: "For when you only need a sip of IP info.".to_string(),
+            img_href: "images/sip.jpg".to_string(),
+            img_alt: "Screenshot of the sip command line utility.".to_string(),
+            technologies: vec![
+                "Rust".to_string(), 
+                "Interfaces.rs".to_string()
+            ],
+            description: "A simple command line utility that gives your local interface IP's and subnets without having to look through the mess that ip or ifconfig splat on your screen.".to_string(),
+            github_href: Some("".to_string()),
+            preview_href: None
+        },
+        PortfolioItem::PortfolioItemProps {
             title: "Hudu Keyboard Navigation".to_string(),
             subtitle: "Hu needs a mouse anyway?".to_string(),
             img_href: "images/headshot.jpg".to_string(),
             img_alt: "Screenshot of this website".to_string(),
             technologies: vec![
-                "Rust".to_string(), 
-                "Sycamore".to_string(), 
+                "JavaScript".to_string(), 
+                "Tampermonkey".to_string(), 
             ],
             description: "I had put in a feature request to the Hudu Documentation team to support keyboard navigation a la IT Glue. The request never gained traction, so I took things into my own hands. I have actually become so accustomed to this that when I don't have it installed on one of the computers I'm using, I'll stop what I'm doing to install Tampermonkey and this userscript. It has become a necessity to myself and a couple others at my place of work.".to_string(),
             github_href: Some("".to_string()),
