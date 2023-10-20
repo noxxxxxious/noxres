@@ -14,10 +14,10 @@ html, body {
 
 nav {
 	position: fixed;
-	background-image: linear-gradient(to right, #00000000, #000000dd, #000000dd, #00000000);
+	background-color: #111;
 	top: 20px;
 	left: 50%;
-	width: 300px;
+	width: fit-content;
 	height: 40px;
 	transform: translateX(-50%);
 	z-index: 10;
@@ -26,10 +26,46 @@ nav {
 	align-items: center;
 }
 
+nav::before {
+	content: "";
+	height: 28px;
+	width: 28px;
+	background-color: #111;
+	position: absolute;
+	top: 6px;
+	left: 0;
+	transform: translateX(-50%) rotate(45deg);
+}
+
+nav::after {
+	content: "";
+	height: 28px;
+	width: 28px;
+	background-color: #111;
+	position: absolute;
+	top: 6px;
+	right: 0;
+	transform: translateX(50%) rotate(45deg);
+}
+.header {
+	position: relative;
+	margin: auto;
+	text-align: center;
+	font-size: 3rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 10px;
+	transform: translateY(calc(-50% - 1px));
+	background-color: #111;
+	width: fit-content;
+	padding: 0px 25px;
+}
+
 nav ul {
 	all: unset;
 	display: flex;
 	gap: 10px;
+	z-index: 11;
 }
 
 nav ul li {
@@ -51,6 +87,16 @@ nav ul li:hover, nav ul li.active {
 	border-radius: 15px;
 	width: 100px;
 	cursor: pointer;
+}
+
+section {
+	border-top: 2px solid #111;
+	padding-bottom: 100px;
+}
+
+section:first-of-type {
+	border-top: none;
+	padding-bottom: none;
 }
 
 #top {
@@ -125,8 +171,48 @@ nav ul li:hover, nav ul li.active {
 	text-shadow: 5px 5px 5px #00000055;
 }
 
+.blender {
+	height: 50px;
+}
+
 #portfolio {
-	background-color: #3d403d;
+	background-color: #222;
+}
+
+.header {
+	position: relative;
+	margin: auto;
+	text-align: center;
+	font-size: 3rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 10px;
+	transform: translateY(calc(-50% - 1px));
+	background-color: #111;
+	width: fit-content;
+	padding: 0px 25px;
+}
+
+.header::before {
+	content: "";
+	height: 2.5rem;
+	width: 2.5rem;
+	background-color: #111;
+	position: absolute;
+	top: 8px;
+	left: 0;
+	transform: translateX(-50%) rotate(45deg);
+}
+
+.header::after {
+	content: "";
+	height: 2.5rem;
+	width: 2.5rem;
+	background-color: #111;
+	position: absolute;
+	top: 8px;
+	right: 0;
+	transform: translateX(50%) rotate(45deg);
 }
 
 .portfolio--container {
@@ -140,10 +226,10 @@ nav ul li:hover, nav ul li.active {
 .portfolio-item--container {
 	overflow: hidden;
 	border-radius: 15px;
-	background-color: #222;
+	background-color: #3d403d;
 	box-shadow: 5px 5px 5px #00000055;
 	display: flex;
-	border: 10px solid #222;
+	padding: 20px;
 }
 
 .portfolio-item--image {
@@ -151,11 +237,14 @@ nav ul li:hover, nav ul li.active {
 	height: 335px;
 	flex-shrink: 0;
 	background-size: cover;
+	background-position: center;
 	border-radius: 15px;
+	box-shadow: 0px 0px 10px 5px #00000055;
 }
 
 .portfolio-item--info-wrapper {
 	padding: 20px;
+	padding-bottom: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -209,4 +298,44 @@ nav ul li:hover, nav ul li.active {
 	color: #88ba88;
 	text-transform: uppercase;
 	text-decoration: none;
+}
+
+.about--container {
+	padding: 150px;
+}
+
+.about--diamond {
+	border: 10px solid #111;
+	width: 400px;
+	height: 400px;
+	margin: auto;
+	transform: rotate(45deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.about--diamond--background {
+	position: absolute;
+	height: 150%;
+	width: 150%;
+	background-image: url('images/about.jpg');
+	background-size: 600px;
+	background-position: top center;
+	transform: rotate(-45deg);
+	filter: sepia(1);
+}
+
+.about--content-wrapper {
+	transform: rotate(-45deg);
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-size: 2rem;
+}
+
+#profiles {
+	background-color: #222;
 }

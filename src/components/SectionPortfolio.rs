@@ -8,7 +8,7 @@ pub fn SectionPortfolio<G: Html>() -> View<G> {
         PortfolioItem::PortfolioItemProps {
             title: "Yomikku".to_string(),
             subtitle: "A manga reader for Japanese learners.".to_string(),
-            img_href: "images/headshot.jpg".to_string(),
+            img_href: "images/yomikku.jpg".to_string(),
             img_alt: "Screenshot of the Yomikku web application.".to_string(),
             technologies: vec![
                 "Vue 3".to_string(), 
@@ -24,7 +24,7 @@ pub fn SectionPortfolio<G: Html>() -> View<G> {
         PortfolioItem::PortfolioItemProps {
             title: "Jungle Camp".to_string(),
             subtitle: "Item information for the MOBA Predecessor.".to_string(),
-            img_href: "images/headshot.jpg".to_string(),
+            img_href: "images/junglecamp.png".to_string(),
             img_alt: "Screenshot of the Jungle Camp website".to_string(),
             technologies: vec![
                 "Vue 2".to_string(), 
@@ -37,7 +37,7 @@ pub fn SectionPortfolio<G: Html>() -> View<G> {
         PortfolioItem::PortfolioItemProps {
             title: "Rust Portfolio Website".to_string(),
             subtitle: "Did I mention it was written in Rust?".to_string(),
-            img_href: "images/headshot.jpg".to_string(),
+            img_href: "images/noxres.jpg".to_string(),
             img_alt: "Screenshot of this website".to_string(),
             technologies: vec![
                 "Rust".to_string(), 
@@ -63,7 +63,7 @@ pub fn SectionPortfolio<G: Html>() -> View<G> {
         PortfolioItem::PortfolioItemProps {
             title: "Hudu Keyboard Navigation".to_string(),
             subtitle: "Hu needs a mouse anyway?".to_string(),
-            img_href: "images/headshot.jpg".to_string(),
+            img_href: "images/tampermonkey.png".to_string(),
             img_alt: "Screenshot of this website".to_string(),
             technologies: vec![
                 "JavaScript".to_string(), 
@@ -71,7 +71,7 @@ pub fn SectionPortfolio<G: Html>() -> View<G> {
             ],
             description: "I had put in a feature request to the Hudu Documentation team to support keyboard navigation a la IT Glue. The request never gained traction, so I took things into my own hands. I have actually become so accustomed to this that when I don't have it installed on one of the computers I'm using, I'll stop what I'm doing to install Tampermonkey and this userscript. It has become a necessity to myself and a couple others at my place of work.".to_string(),
             github_href: Some("".to_string()),
-            preview_href: Some("".to_string()),
+            preview_href: None
         }
     ];
 
@@ -92,6 +92,7 @@ pub fn SectionPortfolio<G: Html>() -> View<G> {
 
     view! {
         section(id="portfolio"){
+            div(class="header") { "Portfolio" }
             div(class="portfolio--container") {
                 (pviews)
             }   
