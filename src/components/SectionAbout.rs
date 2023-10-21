@@ -9,6 +9,7 @@ pub fn SectionAbout<G: Html>() -> View<G> {
                 div(class="about--diamond") {
                     div(class="about--diamond--background"){}
                 }
+                div(class="about--content-connector") {}
                 div(class="about--info-wrapper") {
                     div(class="about--info--education") {
                         div(class="about--info--header") {
@@ -19,6 +20,7 @@ pub fn SectionAbout<G: Html>() -> View<G> {
                         }
                     }
                 }
+                div(class="about--content-connector bottom") {}
             }
         }
     }

@@ -92,7 +92,9 @@ pub fn SectionPortfolio<G: Html>() -> View<G> {
 
     view! {
         section(id="portfolio"){
-            div(class="header") { "Portfolio" }
+            div(class="header") { 
+                span(class="header--text"){ "Portfolio" }
+            }
             div(class="portfolio--container") {
                 (pviews)
             }   

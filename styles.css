@@ -47,19 +47,6 @@ nav::after {
 	right: 0;
 	transform: translateX(50%) rotate(45deg);
 }
-.header {
-	position: relative;
-	margin: auto;
-	text-align: center;
-	font-size: 3rem;
-	text-transform: uppercase;
-	font-weight: 700;
-	letter-spacing: 10px;
-	transform: translateY(calc(-50% - 1px));
-	background-color: #111;
-	width: fit-content;
-	padding: 0px 25px;
-}
 
 nav ul {
 	all: unset;
@@ -301,7 +288,9 @@ section:first-of-type {
 }
 
 .about--container {
-	padding: 150px;
+	width: 400px;
+	margin: auto;
+	margin-top: 150px;
 }
 
 .about--diamond {
@@ -315,6 +304,7 @@ section:first-of-type {
 	align-items: center;
 	position: relative;
 	overflow: hidden;
+	z-index: 3;
 }
 
 .about--diamond--background {
@@ -328,12 +318,37 @@ section:first-of-type {
 	filter: sepia(1);
 }
 
-.about--content-wrapper {
-	transform: rotate(-45deg);
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	font-size: 2rem;
+.about--content-connector {
+	margin-top: -70px;
+	margin-left: 58.5px;
+	margin-bottom: -142.5px;
+	width: 283.5px;
+	height: 283.5px;
+	border: 5px solid #111;
+	border-right: none;
+	border-bottom: none;
+	background-color: #3d403d;
+	transform-origin: center;
+	transform: rotate(45deg);
+}
+
+.bottom {
+	margin-bottom: auto;
+	margin-top: -142.5px;
+	border: 5px solid #111;
+	border-left: none;
+	border-top: none;
+}
+
+.about--info-wrapper {
+	position: relative;
+	width: 400px;
+	height: 400px;
+	background-color: #3d403d;
+	border: 7px solid #111;
+	border-top: none;
+	border-bottom: none;
+	z-index: 2;
 }
 
 #profiles {
