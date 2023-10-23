@@ -91,6 +91,9 @@ section:first-of-type {
 	height: 70vh;
 	align-items: center;
 	justify-content: center;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='250' preserveAspectRatio='none' viewBox='0 0 1440 250'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1009%26quot%3b)' fill='none'%3e%3crect width='1440' height='250' x='0' y='0' fill='rgba(29%2c 32%2c 29%2c 1)' data-darkreader-inline-fill='' style='--darkreader-inline-fill: %2317191a%3b'%3e%3c/rect%3e%3cpath d='M10 250L260 0L474.5 0L224.5 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1010%26quot%3b)'%3e%3c/path%3e%3cpath d='M244.60000000000002 250L494.6 0L674.6 0L424.6 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1010%26quot%3b)'%3e%3c/path%3e%3cpath d='M496.20000000000005 250L746.2 0L999.7 0L749.7 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1010%26quot%3b)'%3e%3c/path%3e%3cpath d='M739.8000000000001 250L989.8000000000001 0L1276.3000000000002 0L1026.3000000000002 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1010%26quot%3b)'%3e%3c/path%3e%3cpath d='M1393 250L1143 0L963 0L1213 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1011%26quot%3b)'%3e%3c/path%3e%3cpath d='M1183.4 250L933.4000000000001 0L813.4000000000001 0L1063.4 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1011%26quot%3b)'%3e%3c/path%3e%3cpath d='M950.8 250L700.8 0L436.79999999999995 0L686.8 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1011%26quot%3b)'%3e%3c/path%3e%3cpath d='M680.1999999999999 250L430.19999999999993 0L175.19999999999993 0L425.19999999999993 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1011%26quot%3b)'%3e%3c/path%3e%3cpath d='M1268.208654306038 250L1440 78.20865430603794L1440 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1010%26quot%3b)'%3e%3c/path%3e%3cpath d='M0 250L171.79134569396206 250L 0 78.20865430603794z' fill='url(%26quot%3b%23SvgjsLinearGradient1011%26quot%3b)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1009'%3e%3crect width='1440' height='250' fill='white' data-darkreader-inline-fill='' style='--darkreader-inline-fill: %23181a1b%3b'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1010'%3e%3cstop stop-color='rgba(46%2c 49%2c 46%2c 1)' offset='0' data-darkreader-inline-stopcolor='' style='--darkreader-inline-stopcolor: %23242728%3b'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(46%2c 49%2c 46%2c 1)' offset='0.66' data-darkreader-inline-stopcolor='' style='--darkreader-inline-stopcolor: %23242728%3b'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1011'%3e%3cstop stop-color='rgba(46%2c 49%2c 46%2c 1)' offset='0' data-darkreader-inline-stopcolor='' style='--darkreader-inline-stopcolor: %23242728%3b'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(46%2c 49%2c 46%2c 1)' offset='0.66' data-darkreader-inline-stopcolor='' style='--darkreader-inline-stopcolor: %23242728%3b'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+	background-size: cover;
+	background-position: center;
 }
 
 .container {
@@ -164,6 +167,7 @@ section:first-of-type {
 
 #portfolio {
 	background-color: #222;
+	background-size: 50%;
 }
 
 .header {
@@ -287,10 +291,17 @@ section:first-of-type {
 	text-decoration: none;
 }
 
+#about {
+	background: url('images/glanchor.svg');
+}
+
 .about--container {
-	width: 400px;
+	max-width: 1980px;
 	margin: auto;
 	margin-top: 150px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .about--diamond {
@@ -341,16 +352,156 @@ section:first-of-type {
 }
 
 .about--info-wrapper {
+	padding: 20px 10px;
 	position: relative;
 	width: 400px;
-	height: 400px;
 	background-color: #3d403d;
 	border: 7px solid #111;
 	border-top: none;
 	border-bottom: none;
 	z-index: 2;
+	text-align: center;
+}
+
+.about--info--header {
+	font-size: 3rem;
+}
+
+.about--info--hero {
+	font-weight: 100;
+	font-style: italic;
+	font-size: 2rem;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+}
+
+.about--info--underline {
+	width: 80%;
+	height: 3px;
+	border-radius: 3px;
+	background: #111;
+	margin: auto;
+}
+
+.about--info--content {
+	display: flex;
+	flex-direction: column;
+}
+
+.about--info--content ul {
+	width: fit-content;
+	text-align: left;
+}
+
+.about--info--divider-diamond {
+	position: relative;
+	height: 25px;
+	width: 25px;
+	margin: 20px auto;
+	background-color: #111;
+	transform-origin: center;
+	transform: rotate(45deg);
+}
+
+.about--info--divider-diamond::before {
+	position: absolute;
+	content: "";
+	bottom: -15px;
+	left: -15px;
+	height: 10px;
+	width: 10px;
+	background-color: #111;
+}
+
+.about--info--divider-diamond::after {
+	position: absolute;
+	content: "";
+	top: -15px;
+	right: -15px;
+	height: 10px;
+	width: 10px;
+	background-color: #111;
+}
+
+.about--info--divider-diamond--line {
+	height: 2px;
+	background-color: #111;
+	width: 100px;
+	position: absolute;
+	border-radius: 3px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.about--info--skill-list {
+	display: flex;
+	margin: auto;
+	width: 80%;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: center;
 }
 
 #profiles {
 	background-color: #222;
+}
+
+.profiles--container {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+}
+
+.profiles--link {
+	display: block;
+	width: 600px;
+	padding: 10px 80px;
+	border-radius: 15px;
+	background-color: #3d403d;
+	box-shadow: 5px 5px 5px #00000055;
+}
+
+.profiles--link:hover {
+	box-shadow: 0px 0px 10px 5px #ffffff55;
+}
+
+.profiles--link img {
+	width: 100%;
+}
+
+.no-email {
+	width: 600px;
+}
+
+.no-email--header {
+	margin-top: 50px;
+	text-align: center;
+	font-size: 4rem;
+	font-weight: 300;
+	font-style: italic;
+}
+
+.no-email--divider,
+.no-email--divider::before,
+.no-email--divider::after {
+	background-color: white;
+}
+
+.no-email--content,
+.no-email--thanks {
+	font-size: 2rem;
+	font-weight: 100;
+	text-indent: 5rem;
+}
+
+.no-email--thanks {
+	display: flex;
+	margin-top: 15px;
+	width: 100%;
+	flex-direction: column;
+	align-items: flex-end;
+	font-style: italic;
 }
