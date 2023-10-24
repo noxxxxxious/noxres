@@ -167,6 +167,7 @@ section:first-of-type {
 
 #portfolio {
 	background-color: #222;
+	background-image: linear-gradient(to right, #333, #222, #333);
 	background-size: 50%;
 }
 

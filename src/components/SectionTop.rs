@@ -1,9 +1,17 @@
 use sycamore::prelude::*;
+use crate::scroller;
 
 #[component]
 pub fn SectionTop<G: Html>() -> View<G> {
+    let top_ref = create_node_ref();
+
+    on_mount(move || {
+        let node = top_ref.get::<DomNode>();
+        scroller::add_scroll_element(node);
+    });
+
     view! {
-        section(id="top"){
+        section(id="top", ref=top_ref){
             div(class="container landing--container"){
                 div(class="landing--heading--container"){
                     span(class="landing--heading--name"){ "Sean Fried" }
