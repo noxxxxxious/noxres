@@ -1,3 +1,4 @@
+pub mod Page;
 pub mod SectionTop;
 pub mod SectionPortfolio;
 pub mod SectionAbout;

@@ -1,7 +1,7 @@
 use sycamore::prelude::*;
 
-#[component]
-pub fn SectionAbout<G: Html>() -> View<G> {
+#[component(inline_props)]
+pub fn SectionAbout<G: Html>(nav_refs: [NodeRef<G>; 4]) -> View<G> {
     view! {
         section(id="about") {
             div(class="header") { "About" }

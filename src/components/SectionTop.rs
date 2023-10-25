@@ -1,17 +1,26 @@
-use sycamore::prelude::*;
-use crate::scroller;
+use sycamore::{prelude::*, web::html::ev::scroll};
+use web_sys::{Event, console};
 
-#[component]
-pub fn SectionTop<G: Html>() -> View<G> {
-    let top_ref = create_node_ref();
+#[component(inline_props)]
+pub fn SectionTop<G: Html>(nav_refs: [NodeRef<G>; 4]) -> View<G> {
+    let section_ref = create_node_ref();
+    
+    let scroll_handler = move |event: Event| {
+        console::log_1(&"text".into());
+    };
 
     on_mount(move || {
-        let node = top_ref.get::<DomNode>();
-        scroller::add_scroll_element(node);
+        section_ref.get::<DomNode>().event(web_sys::WheelEvent, |event: Event|{
+            if let Some(target) = event.target() {
+                console::log_1(&target.js_typeof());
+            }
+            console::log_1(&"event text".into());
+        });
+        console::log_1(&"mount text".into());
     });
 
     view! {
-        section(id="top", ref=top_ref){
+        section(id="top", ref=section_ref){
             div(class="container landing--container"){
                 div(class="landing--heading--container"){
                     span(class="landing--heading--name"){ "Sean Fried" }

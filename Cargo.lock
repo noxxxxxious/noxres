@@ -113,8 +113,10 @@ name = "noxres"
 version = "0.1.0"
 dependencies = [
  "console_log",
+ "js-sys",
  "log",
  "sycamore",
+ "web-sys",
 ]
 
 [[package]]

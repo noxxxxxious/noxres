@@ -1,8 +1,8 @@
 use sycamore::prelude::*;
 use crate::components::PortfolioItem;
 
-#[component]
-pub fn SectionPortfolio<G: Html>() -> View<G> {
+#[component(inline_props)]
+pub fn SectionPortfolio<G: Html>(nav_refs: [NodeRef<G>; 4]) -> View<G> {
 
     let pitems = vec![
         PortfolioItem::PortfolioItemProps {

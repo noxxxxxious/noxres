@@ -9,3 +9,6 @@ edition = "2021"
 sycamore = { git = "https://github.com/sycamore-rs/sycamore", rev = "05433da18365ee3198788035cd2c228168d7995b" }
 log = "0.4"
 console_log = {version = "*"}
+
+[dependencies.web-sys]
+[dependencies.js-sys]
