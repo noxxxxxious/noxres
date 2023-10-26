@@ -2,7 +2,7 @@ use sycamore::prelude::*;
 use crate::components::PortfolioItem;
 
 #[component(inline_props)]
-pub fn SectionPortfolio<G: Html>(nav_refs: [NodeRef<G>; 4]) -> View<G> {
+pub fn SectionPortfolio<G: Html>(in_ref: NodeRef<G>) -> View<G> {
 
     let pitems = vec![
         PortfolioItem::PortfolioItemProps {
@@ -91,7 +91,7 @@ pub fn SectionPortfolio<G: Html>(nav_refs: [NodeRef<G>; 4]) -> View<G> {
     );
 
     view! {
-        section(id="portfolio"){
+        section(ref=in_ref, id="portfolio"){
             div(class="header") { 
                 span(class="header--text"){ "Portfolio" }
             }

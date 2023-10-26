@@ -11,4 +11,4 @@ log = "0.4"
 console_log = {version = "*"}
 
 [dependencies.web-sys]
-[dependencies.js-sys]
+features = ["DomRect", "Element"]

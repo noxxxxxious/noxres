@@ -1,27 +1,34 @@
 use sycamore::prelude::*;
+use web_sys::{Event, console, Document, Element};
 
 #[component]
 pub fn Page<G: Html>() -> View<G> {
 
-    let nav_ref_top = create_node_ref();
-    let nav_ref_portfolio = create_node_ref();
-    let nav_ref_about = create_node_ref();
-    let nav_ref_profiles = create_node_ref();
+    let main_ref = create_node_ref();
+    let nav_refs: [NodeRef<G>; 4] = [create_node_ref(), create_node_ref(), create_node_ref(), create_node_ref()];
+    let section_refs: [NodeRef<G>; 4] = [create_node_ref(),create_node_ref(),create_node_ref(),create_node_ref()];
 
-    let nav_refs = [nav_ref_top, nav_ref_portfolio, nav_ref_about, nav_ref_profiles];
+    let scroll_handler = move |_event: Event| {
+        let main = main_ref.get::<DomNode>().to_web_sys();
+        for node in section_refs {
+            let element = node.get::<DomNode>().to_web_sys();
+        }
+    };
 
     view! {
-        nav {
-             ul {
-                li(ref=nav_ref_top, class="active") { "Top" }
-                li(ref=nav_ref_portfolio) { "Portfolio" }
-                li(ref=nav_ref_about) { "About" }
-                li(ref=nav_ref_profiles) { "Profiles" }
+        main(ref=main_ref, on:scroll=scroll_handler) {
+            nav {
+                ul {
+                    li(ref=nav_refs[0], class="active") { "Top" }
+                    li(ref=nav_refs[1]) { "Portfolio" }
+                    li(ref=nav_refs[2]) { "About" }
+                    li(ref=nav_refs[3]) { "Profiles" }
+                }
             }
+            crate::components::SectionTop::SectionTop(in_ref=section_refs[0]) {}
+            crate::components::SectionPortfolio::SectionPortfolio(in_ref=section_refs[1]) {}
+            crate::components::SectionAbout::SectionAbout(in_ref=section_refs[2]) {}
+            crate::components::SectionProfiles::SectionProfiles(in_ref=section_refs[3]) {}
         }
-        crate::components::SectionTop::SectionTop(nav_refs=nav_refs.clone()) {}
-        crate::components::SectionPortfolio::SectionPortfolio(nav_refs=nav_refs.clone()) {}
-        crate::components::SectionAbout::SectionAbout(nav_refs=nav_refs.clone()) {}
-        crate::components::SectionProfiles::SectionProfiles(nav_refs=nav_refs) {}
     }
 }

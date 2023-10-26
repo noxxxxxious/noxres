@@ -1,9 +1,9 @@
 use sycamore::prelude::*;
 
 #[component(inline_props)]
-pub fn SectionAbout<G: Html>(nav_refs: [NodeRef<G>; 4]) -> View<G> {
+pub fn SectionAbout<G: Html>(in_ref: NodeRef<G>) -> View<G> {
     view! {
-        section(id="about") {
+        section(ref=in_ref, id="about") {
             div(class="header") { "About" }
             div(class="about--container") {
                 div {

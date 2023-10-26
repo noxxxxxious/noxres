@@ -1,9 +1,9 @@
 use sycamore::prelude::*;
 
 #[component(inline_props)]
-pub fn SectionProfiles<G: Html>(nav_refs: [NodeRef<G>; 4]) -> View<G> {
+pub fn SectionProfiles<G: Html>(in_ref: NodeRef<G>) -> View<G> {
     view! {
-        section(id="profiles"){
+        section(ref=in_ref, id="profiles"){
             div(class="header"){ "Profiles" }
             div(class="profiles--container"){
                 a(href="https://github.com/noxxxxxious", class="profiles--link") {
