@@ -92,6 +92,7 @@ pub fn SectionPortfolio<G: Html>(in_ref: NodeRef<G>) -> View<G> {
 
     view! {
         section(ref=in_ref, id="portfolio"){
+            div(id="portfolio-anchor", class="section-anchor") {}
             div(class="header") { 
                 span(class="header--text"){ "Portfolio" }
             }

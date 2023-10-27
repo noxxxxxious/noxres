@@ -16,11 +16,13 @@ html, body {
 main {
 	height: 100vh;
 	width: 100vw;
-	overflow-y: auto;
+	overflow-y: scroll;
+	position: relative;
+	scroll-behavior: smooth;
 }
 
 nav {
-	position: fixed;
+	position: sticky;
 	background-color: #111;
 	top: 20px;
 	left: 50%;
@@ -55,14 +57,14 @@ nav::after {
 	transform: translateX(50%) rotate(45deg);
 }
 
-nav ul {
+nav menu {
 	all: unset;
 	display: flex;
 	gap: 10px;
 	z-index: 11;
 }
 
-nav ul li {
+nav menu a {
 	all: unset;
 	display: inline-block;
 	width: 20px;
@@ -76,7 +78,7 @@ nav ul li {
 	text-align: center;
 }
 
-nav ul li:hover, nav ul li.active {
+nav menu a:hover, nav menu a.active {
 	color: white;
 	border-radius: 15px;
 	width: 100px;
@@ -86,11 +88,17 @@ nav ul li:hover, nav ul li.active {
 section {
 	border-top: 2px solid #111;
 	padding-bottom: 100px;
+	position: relative;
 }
 
 section:first-of-type {
 	border-top: none;
 	padding-bottom: none;
+}
+
+.section-anchor {
+	position: absolute;
+	top: -110px;
 }
 
 #top {
@@ -291,7 +299,6 @@ section:first-of-type {
 	gap: 20px;
 }
  .portfolio-item--info--links-wrapper a {
-	unset: all;
 	font-weight: bold;
 	letter-spacing: 3px;
 	color: #88ba88;

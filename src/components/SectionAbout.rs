@@ -4,6 +4,7 @@ use sycamore::prelude::*;
 pub fn SectionAbout<G: Html>(in_ref: NodeRef<G>) -> View<G> {
     view! {
         section(ref=in_ref, id="about") {
+            div(id="about-anchor", class="section-anchor") {}
             div(class="header") { "About" }
             div(class="about--container") {
                 div {
