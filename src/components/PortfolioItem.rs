@@ -34,8 +34,14 @@ pub fn PortfolioItem<G: Html>(props: PortfolioItemProps) -> View<G> {
 
     let image_style = ["background-image: url(\"", &props.img_href, "\");"].join("");
 
+    let mobile_title = props.title.clone();
+    let mobile_subtitle = props.subtitle.clone();
     view! {
         article(class="portfolio-item--container") {
+            div(class="portfolio-item--mobile-header") {
+                div(class="portfolio-item--mobile-header--title") {(mobile_title)}
+                div(class="portfolio-item--mobile-header--subtitle") {(mobile_subtitle)}
+            }
             div(class="portfolio-item--image", style=image_style) {}
             div(class="portfolio-item--info-wrapper") {
                 div(class="portfolio-item--top-wrapper"){
