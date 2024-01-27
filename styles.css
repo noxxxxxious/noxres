@@ -328,6 +328,7 @@ section:first-of-type {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .about--diamond {
@@ -483,7 +484,7 @@ section:first-of-type {
 
 .profiles--link {
 	display: block;
-	width: 600px;
+	width: 400px;
 	padding: 10px 80px;
 	border-radius: 15px;
 	background-color: #3d403d;
@@ -532,7 +533,7 @@ section:first-of-type {
 	font-style: italic;
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1070px) {
 	.portfolio--container {
 		width: 600px;
 	}
@@ -562,22 +563,151 @@ section:first-of-type {
 	.portfolio-item--info--description {
 		margin-bottom: 20px;
 	}
+
+	.about--container {
+		flex-direction: column;
+	}
+
+	.about--section1 {
+		order: 1;
+		z-index: 2;
+	}
+
+	.about--section2 {
+		order: 0;
+		z-index: 3;
+	}
+
+	.about--section3 {
+		order: 2;
+	}
 }
 
+@media only screen and (max-width: 975px) {
+	.landing--container {
+		width: 600px;
+	}
+
+	.landing--heading--name {
+		font-size: 4rem;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.landing--container {
+		flex-direction: column;
+		width: 350px;
+	}
+
+	.landing--heading--container {
+		order: 1;
+		padding: 20px 0px;
+	}
+
+	.landing--picture--container {
+		order: 0;
+		width: 350px;
+		height: 350px;
+		border-top-left-radius: 20px;
+		border-bottom-right-radius: 0px;
+	}
+
+	.landing--heading--name {
+		font-size: 3rem;
+	}
+
+	.landing--rust {
+		bottom: -20px;
+		right: -20px;
+	}
+}
 
 @media only screen and (max-width: 620px) {
+	nav {
+		display: none;
+	}
+
 	.portfolio--container {
 		width: calc(100% - 10px);
 		margin: 0px 5px;
 	}
+
 	.portfolio-item--mobile-header {
 		text-align: center;
 	}
+
 	.portfolio-item--info--technologies {
 		margin-bottom: 15px;
 	}
+
 	.portfolio-item--info--links-wrapper,
 	.portfolio-item--info--technologies {
 		justify-content: center;
+	}
+
+	.no-email {
+		width: 100%;
+	}
+
+	.no-email--content,
+	.no-email--thanks {
+		padding: 0px 10px;
+	}
+}
+
+@media only screen and (max-width: 590px) {
+	.about--diamond {
+		width: 300px;
+		height: 300px;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.landing--rust {
+		transform: translateX(50%);
+		right: 50%;
+		bottom: -60px;
+	}
+}
+
+@media only screen and (max-width: 468px) {
+	.header {
+		font-size: 2rem;
+		width: 100%;
+	}
+
+	.header::before,
+	.header::after {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 468px) {
+	.about--container {
+		margin-top: 50px;
+	}
+
+	.about--diamond {
+		display: none;
+	}
+
+	.about--content-connector {
+		display: none;
+	}
+
+	.about--info-wrapper {
+		width: 90vw;
+		border: 7px solid #111;
+		margin-bottom: 30px;
+	}
+
+	.profiles--link {
+		width: 90vw;
+	}
+}
+
+@media only screen and (max-width: 468px) {
+	.about--info--header {
+		font-size: 2.5rem;
 	}
 }

@@ -7,7 +7,7 @@ pub fn SectionAbout<G: Html>(in_ref: NodeRef<G>) -> View<G> {
             div(id="about-anchor", class="section-anchor") {}
             div(class="header") { "About" }
             div(class="about--container") {
-                div {
+                div(class="about--section1") {
                     div(class="about--content-connector") {}
                     div(class="about--info-wrapper") {
                         div(class="about--info--history") {
@@ -48,7 +48,7 @@ pub fn SectionAbout<G: Html>(in_ref: NodeRef<G>) -> View<G> {
                     }
                     div(class="about--content-connector bottom")
                 }
-                div{
+                div(class="about--section2"){
                     div(class="about--diamond") {
                         div(class="about--diamond--background")
                     }
@@ -97,7 +97,7 @@ pub fn SectionAbout<G: Html>(in_ref: NodeRef<G>) -> View<G> {
                     }
                     div(class="about--content-connector bottom")
                 }
-                div {
+                div(class="about--section3") {
                     div(class="about--content-connector") {}
                     div(class="about--info-wrapper") {
                         div(class="about--info--education") {
