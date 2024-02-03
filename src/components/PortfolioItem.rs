@@ -23,12 +23,12 @@ pub fn PortfolioItem<G: Html>(props: PortfolioItemProps) -> View<G> {
     );
 
     let preview_link = match props.preview_href {
-        Some(link) => view! { a(href=link) { "[View Project]" } },
+        Some(link) => view! { a(href=link, target="_blank") { "[View Project]" } },
         None => view! {}
     };
 
     let github_link = match props.github_href {
-        Some(link) => view! { a(href=link) { "<View Source/>" } },
+        Some(link) => view! { a(href=link, target="_blank") { "<View Source/>" } },
         None => view! {}
     };
 

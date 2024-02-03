@@ -2,38 +2,17 @@
 		<title></title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/styles-5ed49be167344de0.css">
+		<link rel="stylesheet" href="/styles.css" integrity="sha384-6Vde2iftmmLRQd6Tyctrr1zcxE5HzTu_8IakPihzhylXDcJCQ6FmLta_hAPlZxul" type="text/css">
 		
 	
-<link rel="preload" href="/noxres-de7bed9bae68556a_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
-<link rel="modulepreload" href="/noxres-de7bed9bae68556a.js"></head>
+<link rel="preload" href="/noxres_bg.wasm" as="fetch" type="application/wasm" crossorigin="anonymous" integrity="sha384-KSPiTlvQWK6fhEIsVKT_Us3GMuAmElHFz7jXsQUioh0MljjhnGUontx1vbRnFA6V">
+<link rel="modulepreload" href="/noxres.js" crossorigin="anonymous" integrity="sha384-6F6d_tkWBqsmR5pT1uEymG-Jo2h-q37-28xlyECtjiU-KTKwzDP_EQMnoUHLOXW1"></head>
 	<body>
 
-<script type="module">import init from '/noxres-de7bed9bae68556a.js';init('/noxres-de7bed9bae68556a_bg.wasm');</script><script>(function () {
-    var protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    var url = protocol + '//' + window.location.host + '/_trunk/ws';
-    var poll_interval = 5000;
-    var reload_upon_connect = () => {
-        window.setTimeout(
-            () => {
-                // when we successfully reconnect, we'll force a
-                // reload (since we presumably lost connection to
-                // trunk due to it being killed, so it will have
-                // rebuilt on restart)
-                var ws = new WebSocket(url);
-                ws.onopen = () => window.location.reload();
-                ws.onclose = reload_upon_connect;
-            },
-            poll_interval);
-    };
 
-    var ws = new WebSocket(url);
-    ws.onmessage = (ev) => {
-        const msg = JSON.parse(ev.data);
-        if (msg.reload) {
-            window.location.reload();
-        }
-    };
-    ws.onclose = reload_upon_connect;
-})()
+<script type="module">
+import init, * as bindings from '/noxres.js';
+init('/noxres_bg.wasm');
+window.wasmBindings = bindings;
+
 </script></body></html>
